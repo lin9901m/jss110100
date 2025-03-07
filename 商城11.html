@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大疆无人机购买页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 300px;
+        }
+        .product-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product-card h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 16px;
+            color: #666;
+        }
+        .product-card .price {
+            font-size: 20px;
+            color: #e67e22;
+            margin: 10px 0;
+        }
+        .product-card button {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .product-card button:hover {
+            background-color: #d35400;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <!-- 商品图片 -->
+        <img src="https://cbu01.alicdn.com/img/ibank/O1CN01Ld3KjQ1nx2f47iRs4_!!2473905155-0-cib.jpg"  alt="大疆无人机图片">
+        <!-- 商品名称 -->
+        <h2>大疆无人机 Mavic 3 Pro</h2>
+        <!-- 商品描述 -->
+        <p>大疆 Mavic 3 Pro 是一款专业级航拍无人机，配备三摄像头系统，支持 5.1K 视频拍摄，续航时间长达 46 分钟。</p>
+        <!-- 商品价格 -->
+        <p class="price">￥19999.99</p>
+        <!-- 支付按钮 -->
+        <button onclick="payNow()">立即支付</button>
+    </div>
+ 
+    <script>
+        // 支付功能 
+        function payNow() {
+            // 商家信息 
+            const bankAccount = "1234 5678 9012 3456";
+            const payeeName = "张三";
+            const bankName = "中国银行";
+            const amount = "￥19999.99";
+ 
+            // 弹出支付信息对话框 
+            const paymentInfo = `
+                商家银行卡收款账号：${bankAccount}
+                商家收款人姓名：${payeeName}
+                商家银行卡开户行：${bankName}
+                支付金额：${amount}
+            `;
+            alert(paymentInfo);
+ 
+            // TODO: 集成真实支付接口 
+        }
+    </script>
+</body>
+</html>
